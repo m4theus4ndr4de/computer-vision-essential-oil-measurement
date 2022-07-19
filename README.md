@@ -23,4 +23,4 @@ Below there's an example of how the computer vision system works during the lemo
 
 ![image](https://user-images.githubusercontent.com/74729117/179632226-642b046d-f229-4768-82f8-8b0e9bc8a558.png)
 
-The image above shows that the user can change the RGB and HUE parameters of the color they are trying to find, the color of the essential oil being measured. But the system also accepts a simple click in the image and then the algorithm will search for the color of the pixel that was clicked.
+The image above shows that the user can change the RGB and HSV parameters of the color they are trying to find, the color of the essential oil being measured. But the system also accepts a simple click in the image and then the algorithm will search for the color of the pixel that was clicked.
