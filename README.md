@@ -24,3 +24,26 @@ Below there's an example of how the computer vision system works during the lemo
 ![image](https://user-images.githubusercontent.com/74729117/179632226-642b046d-f229-4768-82f8-8b0e9bc8a558.png)
 
 The image above shows that the user can change the RGB and HSV parameters of the color they are trying to find, the color of the essential oil being measured. But the system also accepts a simple click in the image and then the algorithm will search for the color of the pixel that was clicked.
+
+In the left part of the image there are some trackbars used to interact with the system to change the desired color according to the essential oil being produced. In the middle there is an example of the image from the camera. The red contour is the region in the image in which the pixels have the correct color. The blue rectangle is the bounding box of the red countour.
+
+The tube in which the essential oil is inside is a cylinder. Knowing the size of the blue rectangle, it is possible to apply a scale in milimiters/pixel to calculate the amount of essential oil this rectangle represents.
+
+The measurement system works in three modes:
+
+<ol start="0">
+  <li>The mode 0 is the calibration mode</li>
+    <p>
+      Measurement systems based on computer vision can be created using two different approaches. In the first the object to be measured is placed in front of the           camera in a fixed distance and its size can be calculated based on trigonometry relations. The second method uses an object of known dimensions for the                 calibration of the system and then the distance from the camera to the object that will be measured can be variable. The second one was chosen for this project         because the essential oil extraction process is a batch industrial process and the position of the machinery is not exactly the same every time the extraction         happens. A credit card was the object of known dimensions used to calibrate the system.
+    </p>
+  
+  <li>The mode 1 is the testing mode</li>
+    <p>
+      Once the system is calibrated, the mode 1 is activated so the operator can check if the measurement is adequately working. This way it is possible to guarantee         that    no incorrect value will be sent through Modbus TCP to the supervisory applications. Once the calibration is done and the measerement is correct the next       mode can be    activated.  
+    </p>
+  
+  <li>The mode 2 is the communicating mode</li>
+    <p>    
+      With the correct calibration, the measured value will be available in the Modbus TCP Server for other applications to know how much essential oil is produced in       real time.
+    </p>
+</ol>
