@@ -1,5 +1,3 @@
-# Computer Vision System Modbus TCP
-
 import cv2
 import numpy as np
 from pyModbusTCP.server import ModbusServer
