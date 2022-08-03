@@ -4,7 +4,7 @@ Computer vision system to measure the essential oil produced by steam distillati
 
 This code was created to run on a Raspberry Pi using its camera called Camera Module V2.
 
-This COmputer Vision System requires the following Python packages:
+This Computer Vision System requires the following Python packages:
 
 <ul>
   <li>OpenCV for image processing and computer vision</li>
